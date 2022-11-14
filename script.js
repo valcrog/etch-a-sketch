@@ -9,3 +9,10 @@ function createGridDivs(size) {
         }
     }
 }
+
+let grid = document.querySelector('#grid');
+grid.addEventListener('mouseover', function(event) {
+    if (event.target.classList.contains('cell')) {
+        event.target.style.backgroundColor = 'black';
+    }
+})
