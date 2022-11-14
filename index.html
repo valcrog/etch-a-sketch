@@ -9,9 +9,11 @@
 </head>
 <body>
     <h1>Etch-A-Sketch</h1>
+    <button onclick="reset()">Reset & create new grid</button>
     <div id="grid"></div>
     <script src="script.js"></script>
     <script>
+        configGrid(16);
         createGridDivs(16);
     </script>
 </body>
