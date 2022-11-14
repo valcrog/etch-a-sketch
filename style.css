@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+#grid {
+    margin: 10px auto;
+    border: 2px solid red;
+    height: 900px;
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+
+.cell {
+    border: 1px solid lime;
+}
