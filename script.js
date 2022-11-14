@@ -27,10 +27,21 @@ function reset() {
     createGridDivs(newSize);
 }
 
+function randomInteger(max) {
+    return Math.floor(Math.random()*(max + 1));
+}
+
+function generateRandomColor() {
+    let r = randomInteger(255);
+    let g = randomInteger(255);
+    let b = randomInteger(255);
+    return "rgb("+r+","+g+","+b+")";
+}
+
 const grid = document.querySelector('#grid');
 grid.addEventListener('mouseover', function(event) {
     if (event.target.classList.contains('cell')) {
-        event.target.style.backgroundColor = 'black';
+        event.target.style.backgroundColor = generateRandomColor();
     }
 })
 
