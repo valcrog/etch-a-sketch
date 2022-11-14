@@ -38,9 +38,14 @@ function generateRandomColor() {
     return "rgb("+r+","+g+","+b+")";
 }
 
+function darkenColor(color) {
+    return "rgb(255,255,255)";
+}
+
 const grid = document.querySelector('#grid');
 grid.addEventListener('mouseover', function(event) {
-    if (event.target.classList.contains('cell')) {
+    let classes = event.target.classList
+    if (classes.contains('cell')) {
         event.target.style.backgroundColor = generateRandomColor();
     }
 })
